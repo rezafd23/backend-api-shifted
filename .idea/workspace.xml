@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef746b67-b385-4ef0-a46c-5562ea2225df" name="Default Changelist" comment="" />
+    <list default="true" id="ef746b67-b385-4ef0-a46c-5562ea2225df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/users/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/users/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users/userModel.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jiwkFZ1quXUV3BOTTPs6vDlbg3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,7 +59,8 @@
       <workItem from="1604303774525" duration="5583000" />
       <workItem from="1604332520129" duration="3829000" />
       <workItem from="1604354148259" duration="9120000" />
-      <workItem from="1604375385500" duration="8196000" />
+      <workItem from="1604375385500" duration="16111000" />
+      <workItem from="1604455193578" duration="2722000" />
     </task>
     <servers />
   </component>
@@ -63,6 +72,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="103" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1604304971888" />
+    <state x="555" y="354" key="Github.ShareDialog" timestamp="1604397338099">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="555" y="354" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1604397338099" />
+    <state x="492" y="162" key="Github.UntrackedFilesDialog" timestamp="1604397343774">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="492" y="162" key="Github.UntrackedFilesDialog/0.0.1440.900@0.0.1440.900" timestamp="1604397343774" />
     <state x="221" y="68" key="SettingsEditor" timestamp="1604300533774">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -71,9 +88,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="421" y="205" width="598" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604390479969" />
-    <state x="758" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604388738789">
+    <state x="758" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604398126264">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="758" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604388738789" />
+    <state x="758" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604398126264" />
   </component>
 </project>

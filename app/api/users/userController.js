@@ -1,11 +1,11 @@
 const userModel = require('./userModel');
 const router = require('express').Router();
 const userSchema = require('../users/userSchema');
-const jwt =require('jsonwebtoken')
-const jwtAuth=require('../../util/jwtAuth')
+const jwt = require('jsonwebtoken')
+const jwtAuth = require('../../util/jwtAuth')
 require('dotenv');
 
-var unAuthorizedRes=(res)=>{
+var unAuthorizedRes = (res) => {
     return res.status(401).json({
         status: 401,
         response: {
@@ -90,12 +90,12 @@ router.post('/login', async (req, res) => {
             }
         });
     } else if (emailExist.password === req.body.password) {
-        let user={
-            email:emailExist.email,
-            role:emailExist.role
+        let user = {
+            email: emailExist.email,
+            role: emailExist.role
         }
-        const token = jwt.sign(user,process.env.jwt_key,{expiresIn: process.env.expiresIn})
-        console.log("isi token ",token)
+        const token = jwt.sign(user, process.env.jwt_key, {expiresIn: process.env.expiresIn})
+        console.log("isi token ", token)
         return res.status(200).json({
             status: 200,
             response: {
@@ -117,9 +117,9 @@ router.post('/login', async (req, res) => {
     }
 });
 
-router.get('/users', jwtAuth, async (dataLogin,req, res,next) => {
+router.get('/users', jwtAuth, async (dataLogin, req, res, next) => {
     let dataUser = []
-    const posts = await userModel.find({email:dataLogin.email})
+    const posts = await userModel.find({email: dataLogin.email})
     dataUser = posts
     dataUser.map((val, idx) => {
         // console.log("isival",val.role)
@@ -135,11 +135,10 @@ router.get('/users', jwtAuth, async (dataLogin,req, res,next) => {
         }
     });
 })
-router.get('/users/all',jwtAuth, async (dataLogin,req, res,next) => {
-    const posts = await userModel.find({status:"1"})
-
-    console.log("isi ",posts)
-    if (dataLogin.role==="admin"){
+router.get('/users/all', jwtAuth, async (dataLogin, req, res, next) => {
+    const posts = await userModel.find({status: "1"})
+    console.log("isi ", posts)
+    if (dataLogin.role === "admin") {
         return res.status(200).json({
             status: 200,
             response: {
@@ -152,60 +151,128 @@ router.get('/users/all',jwtAuth, async (dataLogin,req, res,next) => {
     }
 })
 
-// router.get('/edit/:id', (req,res) => {
-//     User.findById({_id : req.params.id})
-//         .then(data => res.send(data))
-// })
-router.put('/edit/:id', jwtAuth,(dataLogin,req,res,next) => {
-    if (dataLogin.role==="admin"){
-        userModel.findByIdAndUpdate({_id : req.params.id}, { $set:
-                {
-                    name : req.body.name,
-                    email : req.body.email,
-                    noHp : req.body.noHp,
-                    tempatLahir : req.body.tempatLahir,
-                    tglLahir : req.body.tglLahir,
-                    alamat : req.body.alamat,
-                }})
-            .then(data => {
-                userModel.find({})
-                    .then(data =>
+router.put('/edit/:id', jwtAuth, (dataLogin, req, res, next) => {
+    if (dataLogin.role === "admin") {
+        console.log("role ", dataLogin.role)
+        userModel.findByIdAndUpdate(req.params.id,
+            {
+                $set: {
+                    name: req.body.name,
+                    email: req.body.email,
+                    noHp: req.body.noHp,
+                    tempatLahir: req.body.tempatLahir,
+                    tglLahir: req.body.tglLahir,
+                    alamat: req.body.alamat,
+                }
+            }, (err, docs) => {
+                if (err) {
+                    console.log(err)
+                    res.status(400).json({
+                        status: 400,
+                        response: {
+                            title: "error",
+                            message: err,
+                        }
+                    })
+                } else {
+                    console.log("Updated User : ", docs);
+                    res.status(200).json({
+                        status: 200,
+                        response: {
+                            title: "success",
+                            message: "success update data"
+                        }
+                    })
+                }
+            }).then(data => {
+            console.log("data ", data)
+        })
+    } else {
+        userModel.findById(req.params.id).exec().then((data)=>{
+            if (data.email===dataLogin.email){
+                console.log("user benar")
+                // console.log("cekData ", data)
+                userModel.findByIdAndUpdate(req.params.id,
+                    {
+                        $set: {
+                            name: req.body.name,
+                            email: req.body.email,
+                            noHp: req.body.noHp,
+                            tempatLahir: req.body.tempatLahir,
+                            tglLahir: req.body.tglLahir,
+                            alamat: req.body.alamat,
+                        }
+                    }, (err, docs) => {
+                        if (err) {
+                            console.log(err)
+                            res.status(400).json({
+                                status: 400,
+                                response: {
+                                    title: "error",
+                                    message: err,
+                                }
+                            })
+                        } else {
+                            console.log("Updated User : ", docs);
                             res.status(200).json({
                                 status: 200,
                                 response: {
-                                    message: "success"
+                                    title: "success",
+                                    message: "success update data"
                                 }
                             })
-                        // res.send(data))
-                    )})
-    }
-    else {
-        unAuthorizedRes(res)
+                        }
+                    }).then(data => {
+                    console.log("data ", data)
+                })
+            } else {
+                unAuthorizedRes(res)
+                console.log("user salah ")
+            }
+        })
+
+        // const data = userModel.find({email:'admin@admin.com'})
+        // const data = userModel.findById(req.params.id)
+        // data = userModel.findById(req.params.id)
+        // console.log("cekData")
+        // console.log(data)
+
     }
 })
 
-router.delete('/delete/:id',jwtAuth, (dataLogin,req,res,next) => {
-    if (dataLogin.role==="admin"){
-        userModel.findOneAndUpdate({_id : req.params.id}, { $set:
-                {
-                    status:"0"
-                }})
-            .then(data => {
-                userModel.find({})
-                    .then(data =>
-                            res.status(200).json({
-                                status: 200,
-                                response: {
-                                    status: "success",
-                                    payload: data
-                                }
-                            })
-                        // res.send(data))
-                    )})
+router.delete('/remove/:id', jwtAuth, (dataLogin, req, res, next) => {
+    if (dataLogin.role === "admin") {
+        console.log("role ", dataLogin.role)
+        userModel.findByIdAndUpdate(req.params.id,
+            {
+                $set: {
+                    status: "0",
+                }
+            }, (err, docs) => {
+                if (err) {
+                    console.log(err)
+                    res.status(400).json({
+                        status: 400,
+                        response: {
+                            title: "error",
+                            message: err,
+                        }
+                    })
+                } else {
+                    console.log("Updated User : ", docs);
+                    res.status(200).json({
+                        status: 200,
+                        response: {
+                            title: "success",
+                            message: "success update data"
+                        }
+                    })
+                }
+            })
     } else {
+        console.log("ERORRR")
         unAuthorizedRes(res)
     }
-
 })
 
 
