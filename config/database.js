@@ -1,6 +1,6 @@
 const dotenv=require('dotenv');
 
-dotenv.config();
+dotenv.config()
 module.exports={
-    url: process.env.DB_DEV
+    url: process.env.DB_DEV,
 }

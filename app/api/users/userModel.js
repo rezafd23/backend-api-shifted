@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const mongoosePaginate = require('mongoose-paginate');
+const conn = require('../../../config/dbMysql')
 
 
 const userSchema = new Schema({
@@ -17,4 +18,5 @@ const userSchema = new Schema({
 });
 userSchema.plugin(mongoosePaginate)
 
-module.exports=mongoose.model('user',userSchema);
+
+module.exports=mongoose.model('user',userSchema)

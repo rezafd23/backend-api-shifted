@@ -1,0 +1,10 @@
+{
+  "env":
+    {
+      "mysqlHost": "localhost",
+      "mysqlLimit": 1,
+      "mysqlUser": "root",
+      "mysqlPassword": "root",
+      "mysqlDatabase": "shifted-bootcamp"
+    }
+}

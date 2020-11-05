@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef746b67-b385-4ef0-a46c-5562ea2225df" name="Default Changelist" comment="" />
+    <list default="true" id="ef746b67-b385-4ef0-a46c-5562ea2225df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/dbMysql.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/users/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/users/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +29,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jiwkFZ1quXUV3BOTTPs6vDlbg3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,6 +65,8 @@
       <workItem from="1604332520129" duration="3829000" />
       <workItem from="1604354148259" duration="9120000" />
       <workItem from="1604375385500" duration="8196000" />
+      <workItem from="1604545226757" duration="3605000" />
+      <workItem from="1604556056732" duration="6842000" />
     </task>
     <servers />
   </component>
@@ -67,10 +82,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="68" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604300533774" />
-    <state x="421" y="205" width="598" height="490" key="find.popup" timestamp="1604390479969">
+    <state x="344" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604551496102">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="421" y="205" width="598" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604390479969" />
+    <state x="344" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1604551496102" />
+    <state x="421" y="205" width="598" height="490" key="find.popup" timestamp="1604551498799">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="421" y="205" width="598" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604551498799" />
     <state x="758" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604388738789">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
