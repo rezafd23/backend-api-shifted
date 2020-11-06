@@ -32,8 +32,10 @@ mongoose.connect(dbConfig.url, {
 
 app.use(express.json());
 const UserControl = require('./app/api/users/userController');
+const deptControl = require('./app/api/department/departmentController');
 
 app.use('/app/api/user',UserControl )
+app.use('/app/api/dept',deptControl )
 
 server.listen(port, hostname, () => console.log("Server listening on port " + port))
 // app.listen(3000, () => {

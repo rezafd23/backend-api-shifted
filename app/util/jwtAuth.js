@@ -4,6 +4,7 @@ require('dotenv')
 const verifyToken=(req,res,next)=>{
     if ("authorization" in req.headers){
         const authHeader = req.headers.authorization.split(" ")
+        console.log("isi authheader" , authHeader)
         if (authHeader.length > 1) {
             const token = authHeader[1]
             const key = process.env.jwt_key

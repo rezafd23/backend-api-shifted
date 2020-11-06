@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef746b67-b385-4ef0-a46c-5562ea2225df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/dbMysql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/department/departmentController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/users/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/users/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users/userModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/util/jwtAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/util/jwtAuth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +46,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/api" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
@@ -66,7 +64,10 @@
       <workItem from="1604354148259" duration="9120000" />
       <workItem from="1604375385500" duration="8196000" />
       <workItem from="1604545226757" duration="3605000" />
-      <workItem from="1604556056732" duration="6842000" />
+      <workItem from="1604556056732" duration="7687000" />
+      <workItem from="1604591753951" duration="3061000" />
+      <workItem from="1604620456587" duration="11482000" />
+      <workItem from="1604644400411" duration="3715000" />
     </task>
     <servers />
   </component>
@@ -86,13 +87,13 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="344" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1604551496102" />
-    <state x="421" y="205" width="598" height="490" key="find.popup" timestamp="1604551498799">
+    <state x="421" y="205" width="598" height="490" key="find.popup" timestamp="1604630351189">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="421" y="205" width="598" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604551498799" />
-    <state x="758" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604388738789">
+    <state x="421" y="205" width="598" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604630351189" />
+    <state x="758" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604630361719">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="758" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604388738789" />
+    <state x="758" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604630361719" />
   </component>
 </project>
